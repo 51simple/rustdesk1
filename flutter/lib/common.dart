@@ -954,7 +954,7 @@ makeMobileActionsOverlayEntry(VoidCallback? onHide, {FFI? ffi}) {
       onBackPressed: session.inputModel.onMobileBack,
       onHomePressed: session.inputModel.onMobileHome,
       onRecentPressed: session.inputModel.onMobileApps,
-      onHidePressed: session.inputModel.onFloatLayer,
+      onHidePressed: gFFI.invokeMethod("show_floatlayer",null),
     );
   }
 
